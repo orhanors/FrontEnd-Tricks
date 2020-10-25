@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: darkgray;
+            display: flex; /* allows us to control children position */
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .box{
+            background-color: darkkhaki;
+            width: 100vmin;
+            height: 80vmin;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .images{
+            width: 20%;
+            height: 30%;
+            margin: 0% 2%;
+            position: relative;
+            
+            
+        }
+        .box .images img{
+            width: 100%;
+            height: 100%;
+            
+            
+        }
+        p{
+            font-size: 100%;
+            color:white;
+            position: absolute;
+            bottom: 0%;
+            margin: 0%;
+            left: 40%;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="images">
+                <img src="./images/carousel1.jpg" alt="">
+                <p>image1</p>
+            </div>  
+            <div class="images">
+                <img src="./images/carousel1.jpg" alt="">
+                <p>image1</p>
+            </div>  
+            
+            <div class="images">
+                <img src="./images/carousel1.jpg" alt="">
+                <p>image1</p>
+            </div>  
+            <div class="images">
+                <img src="./images/carousel1.jpg" alt="">
+                <p>image1</p>
+            </div>
+            
+           
+        </div>
+       
+    </div>
+
+    
+</body>
+</html>

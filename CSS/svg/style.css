@@ -1,0 +1,39 @@
+body{
+    background-color:rgb(32,35,48);
+    margin: 0;
+    padding: 0;
+}
+/* .container{     ---> this can be also used for centering element
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#logo{    /*this is the centering using absolute positioning */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* Delay and stroke-dasharray, stroke-dashoffset features initialized in JS file*/
+#logo path{  
+    animation: anim-line 2s ease forwards;
+}
+
+
+@keyframes anim-line{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
