@@ -59,35 +59,43 @@ const createCards = function(){
         
     }
 }
-/*Specify which element is target and fill it to the album */
 
-const specifySelectedElement = function(){
-    let currentElement = document.querySelectorAll("button");
-    let body = document.querySelector("body")
+const applyModal = function(){
+    let currentElement = document.querySelectorAll(".card:not(.hidden) button");
+  
+    
+    let modalEL = document.querySelector(".modal .modal-body")
 
-    let modal = document.querySelector(".modal .modal-body")
     for(let i =0; i<currentElement.length;i++){
-        if(body.classList.contains("model-open")){
-
-        }
-        currentElement[i].addEventListener("click",(e)=>{
-            let parent = e.target.parentElement
-            console.log(e)
-            let title = parent.querySelector("h5")
-            console.log(title)
-            //TODO this will be applied all elements
+        currentElement[i].addEventListener("click",(e)=>{ 
+            modalEL.innerHTML = ""
+            let title = document.querySelector(".modal-title")
             
-           
-            e.target.parentElement.classList.add("selected-element")
             
-           
+            title.innerText = e.target.previousElementSibling.firstElementChild.innerText //card-title
+            createModal(albumDB[i].tracklist)  
              
         })
+  
+    }  
+}
+
+const createModal = function(trackList){
+  let body = document.querySelector("body")
+    let ul = document.createElement("ul");
+    
+    let modal_body = document.querySelector(".modal-body")
+    
+    
+    for(let i=0; i<trackList.length;i++){
+      let li = document.createElement("li");
+      li.innerText = trackList[i]
+      ul.appendChild(li)
     }
-}
+    modal_body.appendChild(ul)
 
-const modal = function(){
-
-}
+    
+} 
 createCards()
-specifySelectedElement()
+applyModal()
+

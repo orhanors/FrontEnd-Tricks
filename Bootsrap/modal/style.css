@@ -9,6 +9,11 @@ body{
 
 .modal-content{
     background-color:rgb(26, 23, 23);
+    
+}
+
+.modal-body, .modal-title{
+    color:white;
 }
 .card{
     position: relative;
