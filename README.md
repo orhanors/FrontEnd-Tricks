@@ -11,4 +11,5 @@ This repo contains basic works like positioning, floating, animations in CSS, Bo
 ### Bootstrap
 
 - Modal  ---> [jump](https://github.com/orhanors/FrontEnd-Tricks/tree/main/Bootsrap/modal)
-    Different song cards which have tracklist showed by bootsrap modal 
+    
+ -- Different song cards which have tracklist showed by bootsrap modal 
