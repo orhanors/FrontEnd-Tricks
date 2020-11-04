@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: url("../assets/header.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content:"";
+    background: rgb(193,149,37);
+    background: linear-gradient(0deg, rgba(193,149,37,0.6404761733795081) 0%, rgba(193,149,37,0) 100%); 
+}
+
+
+/* SVG ANIMATION*/
+
+header .container{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#logo{    /*this is the centering using absolute positioning */
+    position: absolute;
+    left: 45%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+}
+
+
+/* Delay and stroke-dasharray, stroke-dashoffset features initialized in JS file*/
+#logo path{  
+    animation: anim-line 2s ease forwards;
+}
+
+
+@keyframes anim-line{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+/* EVENTS*/
